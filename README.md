@@ -73,7 +73,7 @@ Among these samples, extend the query to determine:
 ### My take on this assessment
 
 - **Melanoma male responders, B-cell average at time 0**  
-  I loaded the data into a SQLite database using `init_db.py`, filtered for `condition = melanoma`, `response = no`, and `time_from_treatment_start = 0`, and computed the mean `b_cell` count:
+  I loaded the data into a SQLite database using `init_db.py`, filtered for `condition = melanoma`, `sex = M`, `response = yes`, and `time_from_treatment_start = 0`, and computed the mean `b_cell` count:
   - Raw mean: `10206.1505154639`
   - Reported answer (two significant figures): **1.0 × 10^4** B cells
 
