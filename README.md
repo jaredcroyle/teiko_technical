@@ -67,3 +67,26 @@ Among these samples, extend the query to determine:
 - **How many samples** from each project
 - **How many subjects** were responders vs. non-responders
 - **How many subjects** were males vs. females
+
+---
+
+### My take on this assessment
+
+- **Melanoma male responders, B-cell average at time 0**  
+  I loaded the data into a SQLite database using `init_db.py`, filtered for `condition = melanoma`, `sex = M`, `response = yes`, and `time_from_treatment_start = 0`, and computed the mean `b_cell` count:
+  - Raw mean: `10206.1505154639`
+  - Reported answer (two significant figures): **1.0 × 10^4** B cells
+
+- **Interactive dashboard**  
+  I built a lightweight Streamlit dashboard (`dashboard.py`) on top of the same SQLite database. It provides:
+  - Sidebar filters for condition, treatment, sample type, and time from treatment start
+  - A sample overview table
+  - A B-cell boxplot over time, colored by response status
+
+  The visual design takes inspiration from the Teiko Labs website, using a dark navy background with bright red accents to mirror their landing page aesthetic.
+
+  Example screenshots:
+
+  ![Dashboard overview](dashboard1.png)
+
+  ![B-cell responder view](dashboard2.png)
